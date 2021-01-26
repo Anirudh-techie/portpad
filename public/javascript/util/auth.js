@@ -37,6 +37,7 @@ export var signUp = async (email, pwd, name) => {
 
 export var signOut = () => {
   firebase.auth().signOut();
+  location.reload()
 };
 
 export var signIn = async (email, pwd) => {

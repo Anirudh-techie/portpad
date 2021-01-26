@@ -11,13 +11,16 @@
 </head>
 
 <body onload="init('login')">
-   <div class="container">
+   <div class="container" id="f_cont">
       <form id="login">
          <label>email: <input type="text" id="email"></label>
          <label>password: <input type="password" id="password"></label>
-         <button>Submit</button>
+         <div id="f_action">
+            <button>Submit</button>
+            <a href="/register">Not a user? register now!</a>
+
+         </div>
       </form>
-      <a href="/register">Not a user? register now!</a>
    </div>
    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
