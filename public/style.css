@@ -1,0 +1,180 @@
+:root {
+  --x: 0px;
+  --nameMinus: 0px;
+}
+body,
+html,
+.container {
+  width: 100%;
+  height: calc(100% - 12px);
+}
+body {
+  margin: 0;
+}
+.nav {
+  width: 100%;
+  background: #dddddd;
+  font-size: 0;
+}
+.nav-btn {
+  font-size: 18px;
+  padding: 6px;
+}
+.menucontent button {
+  width: 100%;
+  height: 35px;
+  background: #fff;
+  box-shadow: 0 0 1px 0 #222;
+  transition: all 0.1s ease-in-out;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.menucontent button:hover {
+  box-shadow: 0 0 1px 0px #222;
+  background: #ddd;
+}
+.menucontent button:active {
+  background: #bbb;
+}
+#openfile[style*="500px"] ~ .container {
+  filter: blur(2px);
+  pointer-events: none;
+}
+#openfile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  box-shadow: 0 0 6px 0 #222;
+  border-radius: 15px;
+  padding: 0;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all ease-in 0.1s;
+  z-index: 9999999999;
+}
+#openfile h1 {
+  margin: 0;
+  border-bottom: 3px #62e solid;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+* {
+  transition: all ease-in 0.1s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.file {
+  width: 225px;
+  height: 168px;
+  padding: 8px;
+  display: inline-block;
+  margin: 8px 0 8px 0;
+  user-select: none;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 1px 0 #888;
+  transition: all ease-in 0.1s;
+  word-wrap: break-word;
+}
+.file:hover {
+  background: #f1f1f1;
+  box-shadow: 0 0 4px 0px #888;
+}
+
+.file:active {
+  background: #d1d1d1;
+}
+
+.file * {
+  pointer-events: none;
+}
+
+.file h3 {
+  border-bottom: 2px solid #6200ee;
+  margin: 0;
+  margin-bottom: 5px;
+}
+#files {
+  column-count: 2;
+  width: 500px;
+  overflow: hidden;
+  height: 400px;
+}
+#file_btns {
+  text-align: center;
+}
+#file_btns button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 0;
+  border: 0;
+  background: #ddd;
+  transition: all ease-in-out 0.1s;
+  cursor: pointer;
+  outline: none;
+}
+#file_btns button:hover {
+  background: #999;
+  transform: scale(1.1);
+}
+.nav-btn {
+  border: 0;
+  border-right: 1px solid #aaa;
+  background: #ddd;
+  height: 100%;
+  outline: 0;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  background: #9619e9bb;
+}
+
+#editor {
+  resize: none;
+  outline: 0;
+  margin: 12px;
+  border: #aaa 1px solid;
+  width: calc(100% - 35px);
+  height: calc(100% - 38px);
+  font-size: 22px;
+  font-family: cursive;
+}
+#editor:focus {
+  border: #6200ee 3px solid;
+}
+.main {
+  width: 100%;
+  height: calc(100% - 88px);
+}
+#name {
+  padding: 12px;
+  font-size: 28px;
+  margin: 12px;
+  outline: 0;
+  width: calc(100% - (54px + var(--nameMinus)));
+  border: 0;
+  border: #aaa 1px solid;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#name:focus {
+  border: #6200ee 3px solid;
+}
+.menucontent {
+  position: absolute;
+  top: 38.646px;
+  left: var(--x);
+  background: white;
+  width: 150px;
+  height: 300px;
+  border: 1px solid #eee;
+  font-size: 20px;
+  transition: none;
+}

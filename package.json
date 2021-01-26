@@ -1,0 +1,16 @@
+{
+  "name": "portpad",
+  "version": "1.0.0",
+  "description": "project by anirudh manoj",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase": "^8.2.4",
+    "firebase-admin": "^9.4.2"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC"
+}

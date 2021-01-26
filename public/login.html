@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <link rel="stylesheet" href="./style.css">
+   <title>PortPad</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body onload="init('login')">
+   <div class="container">
+      <form id="login">
+         <label>email: <input type="text" id="email"></label>
+         <label>password: <input type="password" id="password"></label>
+         <button>Submit</button>
+      </form>
+      <a href="/register">Not a user? register now!</a>
+   </div>
+   <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+   <script src="./javascript/app.js" type="module"></script>
+   <script src="./javascript/dom.js"></script>
+
+</body>
+
+</html>

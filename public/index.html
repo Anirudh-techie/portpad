@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <link rel="stylesheet" href="./style.css">
+   <title>PortPad</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body onload="init('home')">
+   <div id="openfile">
+      <h1>Open File</h1>
+      <div id="files"></div>
+      <div id="file_btns"></div>
+      <button id="open_new">new file</button>
+   </div>
+   <div class="container">
+      <div class="nav">
+         <button class="nav-btn" id="file">File</button>
+         <div class="menucontent" id="filecontent" hidden>
+            <button id="file_new">new file</button>
+            <button id="open">open file</button>
+         </div>
+         <button class="nav-btn" id="help">Help</button>
+         <div class="menucontent" id="helpcontent" hidden>Note pad by anirudh</div>
+         <button class="nav-btn" id="acc">Account</button>
+         <div class="menucontent" id="acccontent" hidden>
+            <h3 id="accName"></h3>
+            <button id="signout">Sign out</button>
+         </div>
+      </div>
+      <main class="main">
+         <input type="text" id="name" placeholder="name">
+         <textarea id="editor" placeholder="Fill in your thoughts!"></textarea>
+      </main>
+   </div>
+   
+   <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+   <script src="./javascript/app.js" type="module"></script>
+   <script src="./javascript/dom.js"></script>
+   
+</body>
+</html>
