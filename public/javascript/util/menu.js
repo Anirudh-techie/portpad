@@ -1,39 +1,15 @@
 export var init = () => {
-  ["file", "help", "acc"].forEach((menuId) => {
-    var contentid = menuId + "content";
-    document.getElementById(menuId).onclick = function (e) {
-      var hidden = document.getElementById(contentid).hidden;
-      document.getElementById(contentid).hidden = !hidden;
-      document.documentElement.style.setProperty(
-        "--x",
-        e.target.getBoundingClientRect().x + "px"
-      );
-    };
-    document.getElementById(menuId).onmouseover = function (e) {
-      var arr = ["file", "help", "acc"].filter((id) => {
-        var hidden = document.getElementById(id + "content").hidden;
-        document.getElementById(id + "content").hidden = true;
-        return !hidden;
-      });
-
-      if (arr.length > 0) {
-        document.documentElement.style.setProperty(
-          "--x",
-          e.target.getBoundingClientRect().x + "px"
-        );
-        document.getElementById(contentid).hidden = false;
-      }
-    };
+  document.getElementById('ham').onclick = ()=>{
+    var options = document.getElementById("options");
+    options.style.height = options.style.height == "0px"?"150px":"0px";
+    options.style.width = options.style.width == "0px"?"500px":"0px";
+    options.style.padding = options.style.padding == "0px" ? "16px" : "0px";;
+  }
     document.addEventListener("click", function (e) {
-      if (
-        e.target.id != menuId &&
-        e.target.id != contentid &&
-        document.getElementById(contentid).hidden == false
-      ) {
-        document.getElementById(contentid).hidden = true;
-      }
+      options.style.height = options.style.height == "0px";
+    options.style.width = options.style.width == "0px";
+    options.style.padding = options.style.padding == "0px";
     });
-  });
 };
 
 export default {

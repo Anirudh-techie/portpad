@@ -11,13 +11,13 @@
 </head>
 
 <body onload="init('register')">
-   <div class="container">
+   <div class="container" id="f_cont">
       <form id="register">
-         <label>Name: <input type="text" id="name"></label>
-         <label>Email: <input type="text" id="email"></label>
-         <label>Password: <input type="password" id="password"></label>
+         <input type="text" id="name" placeholder="Name">
+         <input type="text" id="email" placeholder="Email">
+       <input type="password" id="password" placeholder="Password">
          <div id="f_action">
-            <button>Submit</button>
+            <button>Submit</button><br>
             <a href="/login">already a user? login now!</a>
          </div>
 

@@ -28,6 +28,9 @@ export var init = () => {
   };
   document.getElementById("file_new").onclick = () => {
     var name = prompt("Name of file: ");
+    if(!name){
+       return;
+    }
     newNote(name).then((d) => {
       open(d);
     });

@@ -15,23 +15,23 @@
       <div id="file_btns"></div>
       <button id="open_new">new file</button>
    </div>
+   <div class="overlay">
+   </div>
    <div class="container">
-      <div class="nav">
-         <button class="nav-btn" id="file">File</button>
-         <div class="menucontent" id="filecontent" hidden>
-            <button id="file_new">new file</button>
-            <button id="open">open file</button>
-         </div>
-         <button class="nav-btn" id="help">Help</button>
-         <div class="menucontent" id="helpcontent" hidden>Note pad by anirudh</div>
-         <button class="nav-btn" id="acc">Account</button>
-         <div class="menucontent" id="acccontent" hidden>
-            <h3 id="accName"></h3>
+      
+      <div id="options" style="padding: 0px; height: 0px; width: 0px;">
+         <h3 id="accName"></h3>
+         <button id="file_new">new file</button>
+         <button id="open">open file</button>
             <button id="signout">Sign out</button>
-         </div>
       </div>
       <main class="main">
          <input type="text" id="name" placeholder="name">
+         <div id="ham">
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
          <textarea id="editor" placeholder="Fill in your thoughts!"></textarea>
       </main>
    </div>

@@ -3,7 +3,7 @@ import { newNote } from "./db.js";
 
 export var showOpenFile = (data) => {
   return new Promise((resolve, reject) => {
-    document.getElementById("openfile").style.height = "500px";
+    document.getElementById("openfile").style.height = "525px";
     document.getElementById("openfile").style.width = "500px";
     document.getElementById("openfile").style.padding = "16px";
     let j=0;
@@ -62,6 +62,9 @@ export var showOpenFile = (data) => {
     }
     document.getElementById('open_new').onclick = ()=>{
       var name = prompt('Name of file: ');
+      if(!name){
+         return;
+      }
       newNote(name).then(
          (d)=>{
             resolve(d);
