@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
    <meta charset='utf-8'>
    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
    <link rel="stylesheet" href="./style.css">
    <title>PortPad</title>
    <meta name='viewport' content='width=device-width, initial-scale=1'>
-   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
 </head>
+
 <body onload="init('home')">
    <div id="openfile">
       <h1>Open File</h1>
       <div id="files"></div>
       <div id="file_btns"></div>
-      <button id="open_new">new file</button>
+      <button id="open_new">new</button>
    </div>
    <div class="overlay">
    </div>
    <div class="container">
-      
-      <div id="options" style="padding: 0px; height: 0px; width: 0px;">
-         <h3 id="accName"></h3>
-         <button id="file_new">new file</button>
-         <button id="open">open file</button>
-            <button id="signout">Sign out</button>
+
+      <!--Setttings-->
+      <div id="options" class="h-full w-full">
+         <h1 id="accName"></h1>
+         <button id="file_new" class="p-3 rounded-md bg-white text-black">new file</button>
+         <button id="open" class="p-3 rounded-md bg-white text-black">open file</button>
+         <button id="signout" class="p-3 rounded-md bg-white text-black">Sign out</button>
       </div>
+
       <main class="main">
-         <input type="text" id="name" placeholder="name">
-         <div id="ham">
-            <div></div>
-            <div></div>
-            <div></div>
+         <div class="bg-black w-full">
+            <input type="text" id="name" placeholder="name">
+            <button class="hamburger hamburger--spin no-button" id="ham" type="button">
+               <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+               </span>
+            </button>
          </div>
+
          <textarea id="editor" placeholder="Fill in your thoughts!"></textarea>
       </main>
    </div>
-   
+
    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
    <script src="./javascript/app.js" type="module"></script>
    <script src="./javascript/dom.js"></script>
-   
+
 </body>
+
 </html>

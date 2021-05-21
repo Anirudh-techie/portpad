@@ -32,6 +32,6 @@ app.post("/getdata",notes.get);
 app.use(express.static('public'));
 app.post('/adduser',auth.adduser);
 
-app.listen(3000,()=>{
-   console.log("Listening server at port 3000: http://localhost:3000")
+app.listen(40000,()=>{
+   console.log("Listening server at port 40000: http://localhost:40000")
 })
