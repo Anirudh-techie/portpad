@@ -12,6 +12,7 @@ module.exports.new = (req,res)=>{
 
 module.exports.get = (req,res)=>{
    var {  uid } = req.body;
+   console.time("firestore")
    firebase.firestore().collection('users').doc(uid).collection('notes').get().then(
       (notes)=>{
          var arr = [];
@@ -20,6 +21,8 @@ module.exports.get = (req,res)=>{
                arr.push({...note.data(),id:note.id});
             }
          )
+         console.timeEnd("firestore")
+
          res.json(arr);
       }
    )

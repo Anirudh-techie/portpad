@@ -6,10 +6,11 @@
    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
    <title>PortPad</title>
    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body onload="init('home')">
+<body onload="init('drawing')">
    <div id="openfile">
       <h1>Open File</h1>
       <div id="files"></div>
@@ -18,18 +19,18 @@
    </div>
    <div class="overlay">
    </div>
-   <div class="container">
+   <div class="w-full h-full">
 
       <!--Setttings-->
-      <div id="options">
+      <div id="options" class="h-full w-full">
          <h1 id="accName"></h1>
-         <button id="file_new" class="btn">new file</button>
-         <button id="open" class="btn">open file</button>
-         <button id="signout" class="btn">Sign out</button>
+         <button id="file_new" class="p-3 rounded-md bg-white text-black">new file</button>
+         <button id="open" class="p-3 rounded-md bg-white text-black">open file</button>
+         <button id="signout" class="p-3 rounded-md bg-white text-black">Sign out</button>
       </div>
 
-      <main class="main">
-         <div class="nav">
+      <main id="main" class="h-full w-full min-h-screen">
+         <div class="bg-black w-full">
             <input type="text" id="name" placeholder="name">
             <button class="hamburger hamburger--spin no-button" id="ham" type="button">
                <span class="hamburger-box">
@@ -38,7 +39,8 @@
             </button>
          </div>
 
-         <textarea id="editor" placeholder="Fill in your thoughts!"></textarea>
+         <div id="editor">
+         </div>
       </main>
    </div>
 
