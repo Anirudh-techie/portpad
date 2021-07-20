@@ -291,7 +291,25 @@ form input:focus {
   transform: scale(1.1);
 }
 .btn{
-  
+
+}
+.nav h2{
+  color: #fff;
+  padding: 12px;
+  margin: 0;
+}
+.sidebar{
+  position: fixed;
+  z-index: 9999;
+  background-color: #222;
+  width: 18%;
+  height: 100%;
+  top:0;
+  left: 0;
+}
+.nav-dev{
+  font-size: unset;
+  border: none;
 }
 #editor {
   resize: none;
@@ -316,7 +334,6 @@ form input:focus {
   
 }
 .main {
-  width: 100%;
   height: calc(100% - 100px);
 }
 #name {
